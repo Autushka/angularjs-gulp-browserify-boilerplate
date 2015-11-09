@@ -16,6 +16,18 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
 
+    coverageReporter: {
+        dir: './test/coverage/',
+        reporters: [{
+                type: 'text-summary'
+            }, {
+                type: 'lcov',
+                dir: 'test/reports',
+                subdir: 'coverage'
+            }
+        ]
+    },
+
     autoWatch: true,
 
     browserify: {
