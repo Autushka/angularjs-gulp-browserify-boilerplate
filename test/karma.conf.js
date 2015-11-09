@@ -8,6 +8,7 @@ module.exports = function(config) {
   config.set({
 
     basePath: '../',
+    plugins: ['karma-phantomjs-launcher'],
     frameworks: ['jasmine', 'browserify'],
     preprocessors: {
       'app/js/**/*.js': ['browserify', 'coverage']
